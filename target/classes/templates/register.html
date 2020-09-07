@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Ksiegarnia</title>
+    <link rel="stylesheet" type="text/css" href="register.css">
+    <script src="validator.js"></script>
+</head>
+
+<body>
+
+<form id="register-form" method="POST" th:object="${user}" onsubmit="return validateForm()">
+    <input type="text" placeholder="login" th:field="*{login}"><br/>
+    <input type="password" placeholder="haslo" th:field="*{password}" id="passwordField"><br/>
+    <input type="password" placeholder="powtorz haslo" name="password2"><br/>
+    <input type="submit" value="OK">
+</form>
+
+</body>
+
+</html>
